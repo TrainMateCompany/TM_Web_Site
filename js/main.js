@@ -98,6 +98,23 @@
             }
         }
     });
-    
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var navbar = document.getElementById("navbar");
+        var logo = document.getElementById("logo");
+
+        var originalImage = "img/LogoTrainmateBlack.png";
+        var scrolledImage = "img/LogoTrainmateWhite.png";
+
+        // Se activará cuando te desplaces hacia abajo
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 0) {
+                logo.src = originalImage ;
+            } else {
+                logo.src = scrolledImage ;
+            }
+        });
+    });
+
 })(jQuery);
 
